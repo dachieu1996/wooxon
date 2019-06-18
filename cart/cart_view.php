@@ -8,8 +8,9 @@
                         <article class="post-8 page type-page status-publish hentry">
                             <div class="entry-content">
                                 <div class="woocommerce">
-                                    <form class="woocommerce-cart-form" action="http://127.0.0.1:8888/theme4/gio-hang/" method="post">
-	                                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+                                    <form class="woocommerce-cart-form" action="<?=$app_path.'cart'?>" method="get">
+                                        <input type="hidden" name="action" value="update">
+	                                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
                                             <thead>
                                                 <tr>
                                                     <th class="product-thumbnail">&nbsp;</th>
@@ -24,8 +25,8 @@
                                             <?php foreach ($cart as $product_id => $item) : ?>
                                                 <tr class="woocommerce-cart-form__cart-item cart_item">
 						                            <td class="product-thumbnail">
-                                                        <a href="<?=$app_path.'catalog/?product_id='.$product['productID']?>">
-                                                            <img width="300" height="300" src="<?=$app_path.'images/'.$item['image']?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" sizes="(max-width: 300px) 100vw, 300px">
+                                                        <a href="<?=$app_path.'catalog/?product_id='.$product_id?>">
+                                                            <img width="300" height="300" src="<?=$app_path.'images/'.$item['image']?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" sizes="(max-width: 300px) 100vw, 300px">
                                                         </a>
                                                     </td>
 						                            <td class="product-name">
@@ -42,19 +43,48 @@
                                                     <td class="product-subtotal">
                                                         <span class="woocommerce-Price-amount amount"><?=number_format($item['line_price'])?><span class="woocommerce-Price-currencySymbol">₫</span></span>						</td>
                                                         <td class="product-remove pr">
-                                                            <a href="http://127.0.0.1:8888/theme4/gio-hang/?remove_item=6c8349cc7260ae62e3b1396831a8398f&amp;_wpnonce=c78e613cdb" class="remove mfp-close icon-cross2" aria-label="Xóa sản phẩm này" data-product_id="45" data-product_sku="">×</a>						
+                                                            <a href="<?=$app_path.'cart/?action=remove_item&product_id='.$product_id?>" class="remove mfp-close icon-cross2" aria-label="Xóa sản phẩm này">×</a>						
                                                         </td>
                                                     </tr>
                                             <?php endforeach?>
 	
                                             <tr>
                                                 <td colspan="7" class="actions">
-                                                    <button type="submit" class="button f_r_md" name="update_cart" value="Cập nhật giỏ hàng" disabled="">Cập nhật giỏ hàng</button>		
+                                                    <button type="submit" class="button f_r_md">Cập nhật giỏ hàng</button>		
                                                 </td>
                                             </tr>
 					                        </tbody>
 	                                    </table>
-	                                </form>
+                                    </form>
+                                    <div class="cart-collaterals dib w100 mb50">
+	                                    <div class="cart_totals ">
+                                            <h2>Tổng giỏ hàng</h2>
+                                            <table class="shop_table">
+                                                <tbody>
+                                                    <tr class="cart-subtotal">
+                                                        <th>Tạm tính</th>
+                                                        <td><?=number_format($sub_total)?> đ</td>
+                                                    </tr>
+                                                    <tr class="woocommerce-shipping-totals shipping">
+                                                        <th>Giao hàng</th>
+                                                        <td>
+                                                            <ul>
+                                                                <li>Giao hàng miễn phí</li>
+                                                                <li>Tùy chọn giao hàng sẽ được cập nhật trong quá trình thanh toán.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="order-total">
+                                                        <th>Tổng</th>
+                                                        <td><strong><?=number_format($sub_total)?> đ</strong></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="wc-proceed-to-checkout">
+                                                <a href="#" class="checkout-button button alt wc-forward w100 t_u t_c hover">Tiến hành thanh toán</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </article>

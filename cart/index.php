@@ -32,7 +32,7 @@ switch ($action) {
         $cart = cart_get_items();
         break;
     case 'update':
-        $items = filter_input(INPUT_POST, 'items', FILTER_DEFAULT, 
+        $items = filter_input(INPUT_GET, 'items', FILTER_DEFAULT, 
                 FILTER_REQUIRE_ARRAY);
         foreach ( $items as $product_id => $quantity ) {
             if ($quantity == 0) {
@@ -43,6 +43,11 @@ switch ($action) {
         }
         $cart = cart_get_items();
         break;
+    case 'remove_item':
+        $product_id = filter_input(INPUT_GET, 'product_id', FILTER_VALIDATE_INT);
+        cart_remove_item($product_id);
+        $cart = cart_get_items();
+        break;
     case 'clearcart':
         clear_cart();
         break;
@@ -50,6 +55,7 @@ switch ($action) {
         add_error("Unknown cart action: " . $action);
         break;
 }
+$sub_total = cart_subtotal();
 include './cart_view.php';
 
 ?>
