@@ -206,7 +206,7 @@ switch ($action) {
         if (is_valid_customer_login($email, $password)) {
             $_SESSION['user'] = get_customer_by_email($email);
         } else {
-            $password_message = 'Login failed. Invalid email or password.';
+            $password_message = 'Đăng nhập thất bại. Không đúng email hoặc mật khẩu.';
             include 'account/account_login_register.php';
             break;
         }
@@ -217,7 +217,7 @@ switch ($action) {
             unset($_SESSION['checkout']);
             redirect('../checkout');
         } else {
-            redirect('.');
+            redirect($app_path);
         }        
         break;
     case 'view_account':

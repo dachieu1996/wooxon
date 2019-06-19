@@ -35,7 +35,9 @@
                                                     <div class="product_meta"><?=$product['madeBy']?></div>
                                                 </div>
                                                 <div class="title-wrap">
-                                                    <h3 class="product-title"><?=$product['productName']?></h3>
+                                                    <h3 class="product-title">
+                                                        <a href="<?=$app_path."catalog/?product_id=".$product['productID']?>"><?=$product['productName']?></a>
+                                                    </h3>
                                                 </div>
                                                 <div class="d_flex align-items-center justify-content-between btn-action">
                                                     <span class="price">

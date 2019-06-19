@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Wooxon</title>
-    <link rel='stylesheet' href="<?=$app_path?>css/style.css" type="text/css"/>
+    <link rel='stylesheet' href="<?=$app_path?>css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" type="text/css"/>
     <link rel='stylesheet' href="<?=$app_path?>css/custom.css" type="text/css"/>
     <link rel='stylesheet' href="<?=$app_path?>css/js_composer.min.css" type="text/css"/>
 </head>
-<body class="woocommerce header-layout-2">
+<body class="woocommerce header-layout-2 woocommerce-account ">
     <header class="site-header">
         <div class="header-main">
             <div class="container">
@@ -17,7 +17,7 @@
                         <div class="header-left">
                             <div class="site-logo">
                                 <a class="dib" href="#">
-                                    <img class="site-logo-image" width="170px" src="http://themepiko.com/demo/wooxon/electronics/wp-content/themes/wooxon/assets/images/logo/logo.png"/>
+                                    <img class="site-logo-image" width="170px" src="<?=$app_path?>images/logo.png"/>
                                 </a>
                             </div>
                         </div>
@@ -44,6 +44,8 @@
                                             </div>                                     
                                         </div>
                                     </li>
+                                    <li id="nav-menu-item-6402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  narrow "><a href="<?=$app_path?>cart" class="">Giỏ hàng</a></li>
+                                    <li id="nav-menu-item-6402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home  narrow "><a href="<?=$app_path?>account" class="">Đăng nhập</a></li>
                                 </ul>
                                 <div class="header-actions">
                                     <ul class="ul-no d_flex flex-row-reverse">

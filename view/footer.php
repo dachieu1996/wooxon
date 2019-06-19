@@ -2,69 +2,21 @@
         <div class="f-inner">
             <div class="f-sidebar">
                 <div class="container ">
-                    <div class="row sub-footer cols_4">
-                        <section class="widget_text widget widget_piko_newsletter">
-                            <div class="piko-newsletter">
-                                <div class="row align-items-center">
-                                    <div class="col-12 col-md-7">
-                                        <h5 class="dib pr10 f_s20 f_w5">Sign up our Newsletter</h5>
-                                        <span class="pl10 f_w5 c_s2">subscribe our news next 40 hours flash sale 50% off first three order and plus free shipping all area United States</span>
-                                    </div>
-                                    <div class="col-12 col-md-5 search-form">
-                                        <div role="form" class="wpcf7" id="wpcf7-f5755-o1" lang="en-US" dir="ltr">
-                                            <div class="screen-reader-response"></div>
-                                            <form action="/theme4/gio-hang/#wpcf7-f5755-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                                                <div style="display: none;">
-                                                    <input type="hidden" name="_wpcf7" value="5755">
-                                                    <input type="hidden" name="_wpcf7_version" value="5.1.3">
-                                                    <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5755-o1">
-                                                    <input type="hidden" name="_wpcf7_container_post" value="0">
-                                                </div>
-                                                <p><label><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your email address"></span></label><input type="submit" value="Sign up" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
-                                                <div class="wpcf7-response-output wpcf7-display-none"></div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="widget_text widget widget_custom_html">
-                            <h4 class="widget-title">Customer Support</h4>
-                            <div class="textwidget custom-html-widget">
-                                <ul class="links">
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Support Center</a></li>
-                                    <li><a href="#">Exchanges</a></li>
-                                    <li><a href="#">Shipping</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms &amp; Conditions</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="widget_text widget widget_custom_html">
-                            <h4 class="widget-title">Top Links</h4>
-                            <div class="textwidget custom-html-widget">
-                                <ul class="links">
-                                    <li><a href="#">Shop Location</a></li>
-                                    <li><a href="#">Account Info</a></li>
-                                    <li><a href="#">Order Tracking</a></li>
-                                    <li><a href="#">Job Vacancy </a></li>
-                                    <li><a href="#">Question</a></li>
-                                    <li><a href="#">Help</a></li>
-                                </ul>
-                            </div>
-                        </section>
+                    <div class="row sub-footer cols_2">
                         <section class="widget_text widget widget_custom_html">
                             <div class="textwidget custom-html-widget">
-                                <img src="http://themepiko.com/demo/wooxon/electronics/wp-content/uploads/2018/10/wooxon-widget.png" alt=""><br>
-                                <p style="padding:27px 20px 0 0">Easy to update text from footer widget area. Add here information about your store.</p>
-                                <p>25 Southern Avenue, USA.<br>
-                                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> (123) 4567 890<br>
+                                <img src="<?=$app_path?>images/logo.png" alt=""><br>
+                                <p style="padding:27px 20px 0 0">Công ty cổ phần Wooxon. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. GP số 56/GP-TTDT do Sở TTTT TP HCM cấp ngày 30/07/2018.</p>
+                                <p>128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh.<br>
+                                    <abbr title="Phone Number"><strong>Điện thoại:</strong></abbr> (123) 4567 890<br>
                                     <abbr title="Email Address"><strong>Email:</strong></abbr> info@company.com<br>
                                 </p>
                             </div>
-                        </section>                        
+                        </section>
+                        <section class="widget_text widget widget_custom_html">
+                            <h4 class="widget-title">Địa chỉ công ty</h4>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.251460109386!2d106.68963581466863!3d10.79204276185663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ccf737716f%3A0xcb01e5cd868acab6!2zU2nDqnUgVGjhu4sgxJBp4buHbiBUaG_huqFpIFRo4bq_IEdp4bubaSBEaSDEkOG7mW5nIFF14bqtbiAx!5e0!3m2!1svi!2s!4v1560962560570!5m2!1svi!2s" width="500" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </section>                      
                     </div>                        
                 </div>
             </div>
@@ -76,20 +28,19 @@
                         <div class="info-right-wrap">
                             <div class="payments-icon">
                                 <ul>
-                                    <li><img src="http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/payment-gray-1.png" alt=""></li>                                       
+                                    <li><img src="<?=$app_path?>images/payment-gray-1.png"></li>                                       
                                 </ul>
                             </div><!-- .payments-icon-->
                         </div> <!--.info-right-wrap-->
                     </div>
                     <div class="col-sm-12 col-md-6 order-md-1">
                         <div class="site-info">
-                            <a class="site-title f_w5 c_s1" href="http://127.0.0.1:8888/theme4/" rel="home">theme4</a>© 2019                  
+                            <a class="site-title f_w5 c_s1" href="#" rel="home">Wooxon</a>© 2019                  
                         </div><!-- .site-info -->
                     </div>            
                 </div><!-- .row -->
            </div>     
         </div>    
-        <a class="scroll-top fixed" href="#top" title="Scroll top"><span class="icon-arrow-long-left up"></span></a>
     </footer>
 </body>
 </html>

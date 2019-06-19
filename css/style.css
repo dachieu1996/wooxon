@@ -3196,8 +3196,9 @@ a.button,
 
 a.button,
 .pikobtn a {
-  display: inline-block;
+  display: block;
   background: transparent;
+  text-align: center
 }
 
 input[type="submit"]:hover,
@@ -9940,15 +9941,13 @@ input.submit {
   .cols_4 section:nth-of-type(2),
   .cols_5 section:nth-of-type(2) {
     -ms-flex-order: 2;
-    order: 2;
   }
 
   .sub-footer.cols_23 section:nth-of-type(1),
   .cols_3 section:first-child,
   .cols_4 section:nth-of-type(3),
   .cols_5 section:nth-of-type(3) {
-    -ms-flex-order: 3;
-    order: 3;
+    -ms-flex-order: 3
   }
 
   .cols_5 section:nth-of-type(4) {
@@ -15448,7 +15447,12 @@ img.mfp-img {
 .product-title {
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 20px;
+  font-weight: bold
 }
+
+
+
 .product-title a:hover {
   color: #000;
 }
@@ -22312,4 +22316,8 @@ input[type="submit"] {
   -ms-transition-property: none !important;
   -webkit-transition-property: none !important;
   transition-property: none !important;
+}
+
+.error {
+  color: red
 }

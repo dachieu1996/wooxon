@@ -25,7 +25,7 @@ class Validate {
 
         // Check field and set or clear error message
         if ($required && empty($value)) {
-            $field->setErrorMessage('Required.');
+            $field->setErrorMessage('Bắt buộc.');
         } else if (strlen($value) < $min) {
             $field->setErrorMessage('Too short.');
         } else if (strlen($value) > $max) {
@@ -88,11 +88,11 @@ class Validate {
         // Split email address on @ sign and check parts
         $parts = explode('@', $value);
         if (count($parts) < 2) {
-            $field->setErrorMessage('At sign required.');
+            $field->setErrorMessage('Không đúng định dạng mail.');
             return;
         }
         if (count($parts) > 2) {
-            $field->setErrorMessage('Only one at sign allowed.');
+            $field->setErrorMessage('Không đúng định dạng mail.');
             return;
         }
         $local = $parts[0];

@@ -108,7 +108,8 @@
                                                                         <img width="300" height="300" src="<?=$app_path.'images/'.$product['image']?>" class="attachment-shop_catalog size-shop_catalog"></a>
                                                                     </figure>                                                                       
                                                                     <!-- End .product-action -->
-                                                                </div>    
+                                                                </div>
+                                                                <a href="/wooxon/cart/?action=add&amp;product_id=7&amp;quantity=1" class="button add_to_cart_button">Thêm vào giỏ</a>    
                                                                 <div class="product-middle">
                                                                     <div class="product-brand d_flex align-items-center justify-content-between mt15">
                                                                         <div class="product_meta"><?=$product['madeBy']?></div>                 
