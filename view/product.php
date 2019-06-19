@@ -52,19 +52,7 @@
                         </div>
                     </main>
                 </div>
-                <aside id="secondary" class="widget-area  col-sm-12 col-md-12 col-lg-3 sidebar sidebar-right" role="complementary">
-                    <section id="woocommerce_products-3" class="widget woocommerce widget_products">
-                        <h4 class="widget-title">Sản phẩm mới về</h4>
-                        <ul class="product_list_widget">
-                            <li>
-                                <a href="http://127.0.0.1:8888/theme4/san-pham/fujifilme-instax-mini-8-instant-film-camera-ultra-hd/">
-                                    <img width="300" height="300" src="http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-300x300.jpg 300w, http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-600x600.jpg 600w, http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-150x150.jpg 150w, http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-768x768.jpg 768w, http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-1024x1024.jpg 1024w, http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1-100x100.jpg 100w, http://127.0.0.1:8888/theme4/wp-content/uploads/2018/01/camera3-1.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px">		<span class="product-title">Fujifilme Instax Mini 8 Instant Film Camera Ultra hd</span>
-                                </a>
-	                            <span class="woocommerce-Price-amount amount">300<span class="woocommerce-Price-currencySymbol">₫</span></span>
-	                        </li>
-                        </ul>
-                    </section>	
-                </aside>
+                <?php include 'sidebar.php' ?>
             </div>
             
         </div>

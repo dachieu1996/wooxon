@@ -29,16 +29,15 @@
                                         <div class="popup" style="display: block;">
                                             <div class="inner" style="">
                                                 <ul class="sub-menu">
-                                                    <li id="nav-menu-item-6405" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-menu-item active" data-cols="1"><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/consumer-electronics/mobile/" class="">Điện thoại</a></li>
-                                                    <li id="nav-menu-item-6408" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/consumer-electronics/tabs/" class="">Máy tính bảng</a></li>
-                                                    <li id="nav-menu-item-6407" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/consumer-electronics/cameras-photography/" class="">Máy ảnh</a></li>
-                                                    <li id="nav-menu-item-6409" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/consumer-electronics/televisions/" class="">Tivi</a></li>
-                                                    <li id="nav-menu-item-6410" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/consumer-electronics/laptop/" class="">Laptop</a></li>
+                                                    <li id="nav-menu-item-6405" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-menu-item active" data-cols="1"><a href="<?=$app_path.'catalog/?category_id=1'?>" class="">Điện thoại</a></li>
+                                                    <li id="nav-menu-item-6407" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="<?=$app_path.'catalog/?category_id=2'?>" class="">Máy ảnh</a></li>
+                                                    <li id="nav-menu-item-6409" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="<?=$app_path.'catalog/?category_id=3'?>" class="">Laptop</a></li>
+                                                    <li id="nav-menu-item-6410" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat " data-cols="1"><a href="#" class="">Tivi</a></li>
                                                     <li id="nav-menu-item-6425" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  sub" data-cols="1"><a href="#" class="">Phụ kiện</a>
                                                         <ul class="sub-menu">
-                                                            <li id="nav-menu-item-6412" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat "><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/watches-eyewear/" class="">Đồng hồ</a></li>
-                                                            <li id="nav-menu-item-6406" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat "><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/consumer-electronics/headphone/" class="">Tai nghe</a></li>
-                                                            <li id="nav-menu-item-6411" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat "><a href="http://127.0.0.1:8888/theme4/danh-muc-san-pham/accessories/" class="">Khác</a></li>
+                                                            <li id="nav-menu-item-6412" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat "><a href="#" class="">Đồng hồ</a></li>
+                                                            <li id="nav-menu-item-6406" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat "><a href="#" class="">Tai nghe</a></li>
+                                                            <li id="nav-menu-item-6411" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat "><a href="#" class="">Khác</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>

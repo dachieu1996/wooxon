@@ -157,4 +157,26 @@ function get_lastest_products_by_category($category_id, $quantity = 3){
         display_db_error($error_message);
     }
 }
+
+function get_lastest_products($quantity = 5){
+    global $db;
+    $query = '
+        SELECT *
+        FROM products p
+           INNER JOIN categories c
+           ON p.categoryID = c.categoryID
+        ORDER BY p.dateAdded DESC
+        LIMIT :quantity';
+    try {
+        $statement = $db->prepare($query);
+        $statement->bindValue(':quantity', $quantity, PDO::PARAM_INT);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    } catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        display_db_error($error_message);
+    }
+}
 ?>

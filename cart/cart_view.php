@@ -2,6 +2,11 @@
 <div>
     <div class="site-inner container">
         <div class="site-content">
+            <nav class="woocommerce-breadcrumb dib">
+                <a href="<?=$app_path?>">Trang chủ</a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <a href="#">Giỏ hàng</a>
+            </nav>
             <div class="row">
                 <div class="content-area  col-sm-12">
                     <main class="site-main">
