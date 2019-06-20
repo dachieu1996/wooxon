@@ -26,7 +26,7 @@ $validate = new Validate();
 $fields = $validate->getFields();
 
 // for the Registration page and other pages
-$fields->addField('email', 'Must be valid email.');
+$fields->addField('email');
 $fields->addField('password_1');
 $fields->addField('password_2');
 $fields->addField('first_name');
@@ -75,7 +75,7 @@ switch ($action) {
         $bill_zip = '';
         $bill_phone = '';
         
-        include 'account_register.php';
+        include 'account_register_view.php';
         break;
     case 'register':
         // Store user data in local variables
@@ -102,20 +102,20 @@ switch ($action) {
         $validate->email('email', $email);
         $validate->text('password_1', $password_1, true, 6, 30);
         $validate->text('password_2', $password_2, true, 6, 30);        
-        $validate->text('first_name', $first_name);
-        $validate->text('last_name', $last_name);
-        $validate->text('ship_line1', $ship_line1);        
+        $validate->text('first_name', $first_name, false);
+        $validate->text('last_name', $last_name, false);
+        $validate->text('ship_line1', $ship_line1, false);        
         $validate->text('ship_line2', $ship_line2, false);        
-        $validate->text('ship_city', $ship_city);        
-        $validate->text('ship_state', $ship_state);        
-        $validate->text('ship_zip', $ship_zip);        
+        $validate->text('ship_city', $ship_city, false);        
+        $validate->text('ship_state', $ship_state, false);        
+        $validate->text('ship_zip', $ship_zip, false);        
         $validate->text('ship_phone', $ship_phone, false);        
         if (!$use_shipping) {
-            $validate->text('bill_line1', $bill_line1);        
+            $validate->text('bill_line1', $bill_line1, false);        
             $validate->text('bill_line2', $bill_line2, false);        
-            $validate->text('bill_city', $bill_city);        
-            $validate->text('bill_state', $bill_state);        
-            $validate->text('bill_zip', $bill_zip);        
+            $validate->text('bill_city', $bill_city, false);        
+            $validate->text('bill_state', $bill_state, false);        
+            $validate->text('bill_zip', $bill_zip, false);        
             $validate->text('bill_phone', $bill_phone, false);
         }
         
@@ -131,20 +131,22 @@ switch ($action) {
 
         // If validation errors, redisplay Register page and exit controller
         if ($fields->hasErrors()) {
-            include 'account/account_register.php';
+            include 'account/account_register_view.php';
             break;
         }
 
         // If passwords don't match, redisplay Register page and exit controller
         if ($password_1 !== $password_2) {
-            $password_message = 'Passwords do not match.';
-            include 'account/account_register.php';
+            $password_message = 'Mật khẩu không trùng khớp.';
+            include 'account/account_register_view.php';
             break;
         }
 
         // Validate the data for the customer
         if (is_valid_customer_email($email)) {
-            display_error('The e-mail address ' . $email . ' is already in use.');
+            $password_message = 'Địa chỉ email '.$email.' đã được sử dụng.';
+            include 'account/account_register_view.php';
+            break;
         }
         
         // Add the customer data to the database
@@ -186,7 +188,7 @@ switch ($action) {
         $password = '';
         $password_message = '';
         
-        include 'account_login_register.php';
+        include 'account_login_view.php';
         break;
     case 'login':
         $email = filter_input(INPUT_POST, 'email');
@@ -198,7 +200,7 @@ switch ($action) {
 
         // If validation errors, redisplay Login page and exit controller
         if ($fields->hasErrors()) {
-            include 'account/account_login_register.php';
+            include 'account/account_login_view.php';
             break;
         }
         
@@ -207,7 +209,7 @@ switch ($action) {
             $_SESSION['user'] = get_customer_by_email($email);
         } else {
             $password_message = 'Đăng nhập thất bại. Không đúng email hoặc mật khẩu.';
-            include 'account/account_login_register.php';
+            include 'account/account_login_view.php';
             break;
         }
 
@@ -386,7 +388,7 @@ switch ($action) {
         break;
     case 'logout':
         unset($_SESSION['user']);
-        redirect('..');
+        redirect($app_path);
         break;
     default:
         display_error("Unknown account action: " . $action);

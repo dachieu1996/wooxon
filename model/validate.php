@@ -27,9 +27,9 @@ class Validate {
         if ($required && empty($value)) {
             $field->setErrorMessage('Bắt buộc.');
         } else if (strlen($value) < $min) {
-            $field->setErrorMessage('Too short.');
+            $field->setErrorMessage('Quá ngắn.');
         } else if (strlen($value) > $max) {
-            $field->setErrorMessage('Too long.');
+            $field->setErrorMessage('Quá dài.');
         } else {
             $field->clearErrorMessage();
         }
@@ -100,11 +100,11 @@ class Validate {
 
         // Check lengths of local and domain parts
         if (strlen($local) > 64) {
-            $field->setErrorMessage('Username part too long.');
+            $field->setErrorMessage('Tên quá dài.');
             return;
         }
         if (strlen($domain) > 255) {
-            $field->setErrorMessage('Domain name part too long.');
+            $field->setErrorMessage('Tên miền quá dài.');
             return;
         }
 

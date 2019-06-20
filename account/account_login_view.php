@@ -34,7 +34,7 @@
                                                         </div>
                                                         <div class="login-submit form-group"> 
                                                             <input type="submit" class="button" name="login" value="Đăng nhập">
-                                                            <a href="" style="float: right">Bạn chưa có tài khoản?</a>
+                                                            <a href="<?=$app_path?>account/?action=view_register" style="float: right" style="float: right">Bạn chưa có tài khoản?</a>
                                                         </div>  
                                                     </form>
                                                     <span class="hr"></span>
