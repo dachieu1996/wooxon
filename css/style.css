@@ -15111,6 +15111,7 @@ img.mfp-img {
 .woocommerce-breadcrumb {
   margin: 1.25rem 0 1.25rem;
   font-size: 0.9375rem;
+  padding: 0px 20px;
 }
 .woocommerce-breadcrumb i {
   margin: 0 0.75rem;
@@ -20445,7 +20446,8 @@ h3.fs45.vc_custom_heading:not(.block-wrap) {
 }
 
 .products:not(.no-gutters) .piko-carousel .product-wrap .product-title {
-  font-size: 0.90625rem;
+  font-size: 1.2rem;
+  font-weight: bold
 }
 
 /*grid masonry size*/

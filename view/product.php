@@ -1,6 +1,7 @@
 <div>
     <div class="site-inner container">
         <div class="site-content">
+            <button type="button" onclick="history.back()" ><i class="fa fa-angle-left"></i> Quay lại</button>
             <nav class="woocommerce-breadcrumb dib">
                 <a href="<?=$app_path?>">Trang chủ</a>
                 <i class="fa fa-angle-right" aria-hidden="true"></i>

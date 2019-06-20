@@ -48,6 +48,13 @@ switch ($action) {
         cart_remove_item($product_id);
         $cart = cart_get_items();
         break;
+    case 'checkout':
+        $cart = cart_get_items();
+        $sub_total = cart_subtotal();
+        include './checkout_view.php';
+        clear_cart();
+        exit;
+        break;
     case 'clearcart':
         clear_cart();
         break;

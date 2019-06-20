@@ -179,7 +179,7 @@ switch ($action) {
             unset($_SESSION['checkout']);
             redirect('../checkout');
         } else {
-            redirect('.');
+            redirect($app_path);
         }        
         break;
     case 'view_login':

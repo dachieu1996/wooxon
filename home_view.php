@@ -109,14 +109,14 @@
                                                                     </figure>                                                                       
                                                                     <!-- End .product-action -->
                                                                 </div>
-                                                                <a href="/wooxon/cart/?action=add&amp;product_id=7&amp;quantity=1" class="button add_to_cart_button">Thêm vào giỏ</a>    
+                                                                <a href="<?=$app_path.'cart/?action=add&product_id='.$product['productID'].'&quantity=1'?>" class="button add_to_cart_button">Thêm vào giỏ</a>    
                                                                 <div class="product-middle">
                                                                     <div class="product-brand d_flex align-items-center justify-content-between mt15">
                                                                         <div class="product_meta"><?=$product['madeBy']?></div>                 
                                                                     </div><!-- End .product-brand -->        
                                                                     <div class="title-wrap">
                                                                         <h3 class="product-title">
-                                                                            <a href="#"><?=$product['productName']?></a>
+                                                                            <a href="<?=$app_path.'catalog/?product_id='.$product['productID']?>"><?=$product['productName']?></a>
                                                                         </h3>
                                                                     </div>        
                                                                     <div class="d_flex align-items-center justify-content-between">
@@ -142,7 +142,7 @@
                                                 <div style="text-align: center" class="fs20">
                                                     <span class="sub-title font_2 f_s16" style="font-weight:300;font-style:normal">Những cải tiến mạnh mẽ</span>Galaxy s10 plus, Iphone Xs Max<br>
                                                     <strong>NHIỀU</strong> và hơn nữa<br>
-                                                    <a href="#" class="banner-btn">Xem ngay </a>
+                                                    <a href="<?=$app_path?>catalog/?category_id=1" class="banner-btn">Xem ngay </a>
                                                 </div>
                                             </div>
                                             <a href="#" title="Explore ">
@@ -179,14 +179,14 @@
                                                                     </figure>                                                                       
                                                                     <!-- End .product-action -->
                                                                 </div>
-                                                                <a href="/wooxon/cart/?action=add&amp;product_id=7&amp;quantity=1" class="button add_to_cart_button">Thêm vào giỏ</a>    
+                                                                <a href="<?=$app_path.'cart/?action=add&product_id='.$product['productID'].'&quantity=1'?>" class="button add_to_cart_button">Thêm vào giỏ</a>    
                                                                 <div class="product-middle">
                                                                     <div class="product-brand d_flex align-items-center justify-content-between mt15">
                                                                         <div class="product_meta"><?=$product['madeBy']?></div>                 
                                                                     </div><!-- End .product-brand -->        
                                                                     <div class="title-wrap">
                                                                         <h3 class="product-title">
-                                                                            <a href="#"><?=$product['productName']?></a>
+                                                                            <a href="<?=$app_path.'catalog/?product_id='.$product['productID']?>"><?=$product['productName']?></a>
                                                                         </h3>
                                                                     </div>        
                                                                     <div class="d_flex align-items-center justify-content-between">
